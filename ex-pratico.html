@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício na Pratica</title>
+</head>
+<body>
+    <h1>Media de Notas</h1>
+   Nota do Aluno: <input type="number" name="aluno1" id="aluno1">
+
+   <input type="button" value="verificar" onclick="calcular()">
+
+    <div id="resolver">
+
+    </div>
+
+    <script>
+        function calcular() {
+            var aluno1 = window.document.querySelector('input#aluno1')
+
+            var resolver = window.document.querySelector('div#resolver')
+
+            var nota = Number(aluno1.value)
+
+            resolver.innerHTML = `<p>Sua nota é ${nota}.</p>`
+
+            if(nota >= 60) {
+               resolver.innerHTML +='<p> Você foi <strong>APROVADO!  </strong></p>'
+               
+            } else {
+                resolver.innerHTML += '<P> Você foi <strong>REPROVADO!</strong> tem que estudar mais.</p>'
+            }
+           
+        }
+    </script>
+   
+</body>
+</html>
